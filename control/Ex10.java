@@ -12,16 +12,18 @@ public class Ex10 {
         for (int i = 1001; i < 10000; i++){
             if (i % 100 != 0){
                 int k = i;
-                List list = new ArrayList();
+                List<Integer> list = new ArrayList();
+                List<Integer> indexList = new ArrayList();
                 for (int j = 0; j < 4; j++){
                     list.add(k % 10);
+                    indexList.add(j);
                     k /= 10;
                 }
                 List<List<Integer>> perm = new ArrayList<List<Integer>>();
-                allPermutation(list,perm);
+                allPermutation(indexList,perm);
                 boolean flag = false;
                 for (List<Integer> l : perm){
-                    if (checkMath(l.get(0),l.get(1),l.get(2),l.get(3),i)){
+                    if (checkMath(list.get(l.get(0)),list.get(l.get(1)),list.get(l.get(2)),list.get(l.get(3)),i)){
                         flag = true;
                     }
                 }
@@ -43,19 +45,7 @@ public class Ex10 {
     private static void allPermutationRec(List<Integer> current, List<Integer> allNumbers, List<List<Integer>> result){
         if (current.size() != allNumbers.size()) {
             for (int x : allNumbers) {
-                int nC = 0;
-                int nA = 0;
-                for (int i : current){
-                    if (i == x){
-                        nC++;
-                    }
-                }
-                for (int i : allNumbers){
-                    if (i == x){
-                        nA++;
-                    }
-                }
-                if (nC < nA) {
+                if (!current.contains(x)){
                     List<Integer> newArr = new ArrayList();
                     newArr.addAll(current);
                     newArr.add(x);
