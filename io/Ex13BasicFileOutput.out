@@ -1,0 +1,18 @@
+1: package io;
+2: 
+3: import java.io.*;
+4: 
+5: public class Ex13BasicFileOutput {
+6:     static String file = "./src/main/java/io/Ex13BasicFileOutput.out";
+7: 
+8:     public static void main(String[] args) throws IOException {
+9:         LineNumberReader lnr = new LineNumberReader(new StringReader(BufferedInputFile.read("./src/main/java/io/Ex13BasicFileOutput.java")));
+10:         PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file)));
+11:         String s;
+12:         while ((s = lnr.readLine()) != null)
+13:             out.println(lnr.getLineNumber() + ": " + s);
+14:         out.close();
+15:         lnr.close();
+16:         System.out.println(BufferedInputFile.read(file));
+17:     }
+18: }

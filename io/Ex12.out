@@ -1,0 +1,27 @@
+27: }
+26:     }
+25:         System.out.println(BufferedInputFile.read("./src/main/java/io/Ex12.out"));
+24:         pw.close();
+23:         }
+22:             pw.println(li.previous());
+21:         while (li.hasPrevious()){
+20:         ListIterator<String> li = ll.listIterator(ll.size());
+19:         br.close();
+18:             ll.add(lineNumber++ + ": " + buf);
+17:         while ((buf = br.readLine()) != null)
+16:         String buf;
+15:         int lineNumber = 1;
+14:         PrintWriter pw = new PrintWriter("./src/main/java/io/Ex12.out");
+13:         BufferedReader br = new BufferedReader(new FileReader(args[0]));
+12:         LinkedList<String> ll = new LinkedList<String>();
+11:     public static void main(String[] args) throws IOException {
+10: public class Ex12 {
+9: 
+8: import java.util.ListIterator;
+7: import java.util.LinkedList;
+6: import java.io.PrintWriter;
+5: import java.io.IOException;
+4: import java.io.FileReader;
+3: import java.io.BufferedReader;
+2: 
+1: package io;

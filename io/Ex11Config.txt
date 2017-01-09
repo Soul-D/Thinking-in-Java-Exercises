@@ -1,0 +1,11 @@
+Bell 900
+Restart 2000 8
+ThermostatNight 0
+LightOn 200
+LightOff 400
+FanOn 500
+WaterOn 600
+WaterOff 800
+FanOff 1000
+ThermostatDay 1400
+Terminate 1000000000
