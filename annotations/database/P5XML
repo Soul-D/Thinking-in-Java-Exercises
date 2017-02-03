@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<HeroList>
+    <Hero>
+        <Name>Golgo 13</Name>
+        <Age>35</Age>
+        <Cool>true</Cool>
+        <Universe>Our universe</Universe>
+    </Hero>
+    <Hero>
+        <Name>Iron man</Name>
+        <Age>35</Age>
+        <Cool>false</Cool>
+        <Universe>Marvel</Universe>
+    </Hero>
+</HeroList>
